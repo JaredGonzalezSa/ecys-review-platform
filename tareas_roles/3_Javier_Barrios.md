@@ -44,6 +44,10 @@ Crear los archivos `/backend/routes/comentariosRoutes.js` y `/backend/controller
   - **Parámetro URL:** `id` (ID de la publicación).
   - **Acción:** Retornar lista de comentarios asociados a la publicación, haciendo `JOIN` con `usuarios` para incluir el nombre del comentarista.
 
+### 4. Manual Técnico
+- Al finalizar el desarrollo, serás responsable de redactar el **Manual Técnico** del sistema.
+- Debes crear un archivo `MANUAL_TECNICO.md` describiendo la arquitectura del backend, la base de datos y cómo interactúan los diferentes componentes y endpoints desarrollados por todo el equipo.
+
 ## Dependencias Técnicas
 - **Pre-requisitos:** El servidor Base de Node.js, conexión MySQL (`db.js`) y Middleware JWT creados por Carlos deben estar en la rama `main`.
 - **Bloqueantes:** Abner requiere tu endpoint `GET /api/publicaciones` para desarrollar el Feed. Héctor requiere tus endpoints `POST` para desarrollar los formularios.

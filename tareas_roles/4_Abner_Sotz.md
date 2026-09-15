@@ -19,6 +19,10 @@ Tu enfoque principal es la experiencia de lectura del usuario (Pantalla Inicial/
 - **Diseño:** Maquetación limpia en CSS. Debe desplegar: Nombre completo del autor, distintivo visual de si es "Catedrático" o "Curso", nombre del catedrático/curso, contenido del mensaje y la fecha formateada (ej. `DD/MM/YYYY`).
 - **Escalabilidad:** Estructurar el DOM de la tarjeta dejando un espacio inferior vacío. Esto es deliberado porque Héctor insertará en ese contenedor el módulo de Comentarios.
 
+### 3. Manual de Usuario
+- Serás el encargado de redactar el **Manual de Usuario** oficial de la plataforma al finalizar el código.
+- Deberás crear un archivo `MANUAL_USUARIO.md` explicando cómo utilizar la página desde la perspectiva de un estudiante, incluyendo pasos y posibles capturas de pantalla de la interfaz final.
+
 ### 3. Sistema de Filtros Avanzado
 - **Archivo:** `/frontend/src/components/Filters.jsx` (Importado dentro de `Home.jsx`).
 - **Estructura:** Barra de herramientas superior con dos mecanismos de filtrado mutuamente excluyentes o complementarios.
