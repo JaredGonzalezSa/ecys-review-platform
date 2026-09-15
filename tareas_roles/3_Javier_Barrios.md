@@ -9,7 +9,7 @@ Serás el desarrollador clave para el flujo principal de información (las rese�
 ## Especificaciones de Desarrollo (Nivel Arquitectura)
 
 ### 1. Modelado de Base de Datos (Scripts SQL)
-Deberás crear y proveer al equipo un script SQL (`script_publicaciones.sql`) con lo siguiente:
+Deberás crear y proveer al equipo un script SQL (`script_publicaciones_comentarios.sql`) (Debe ser subido a GitHub como respaldo, **pero tú debes encargarte de ejecutarlo directamente en la base de datos en la nube (TiDB)** para que las tablas existan para todo el equipo).
 - **Tabla `publicaciones`:**
   - `id_publicacion` (INT AUTO_INCREMENT PRIMARY KEY)
   - `cui_usuario` (VARCHAR(13), FOREIGN KEY a `usuarios(cui)`)

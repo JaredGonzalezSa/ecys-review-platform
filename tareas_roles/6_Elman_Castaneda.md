@@ -9,7 +9,7 @@ Tu misión es diseñar los puntos de acceso de la API que permitan gestionar la 
 ## Especificaciones de Desarrollo (Nivel Arquitectura)
 
 ### 1. Modelado Relacional de Cursos (SQL)
-- Diseñar el script SQL `script_perfil_cursos.sql`.
+- Diseñar el script SQL `script_perfil_cursos.sql` (Debe ser subido al repositorio como respaldo, **pero tú mismo debes ejecutarlo en la base de datos en la nube (TiDB)** para que el equipo pueda utilizarlo sin instalar nada localmente).
 - **Tabla `cursos_aprobados`:**
   - `id_registro` (INT AUTO_INCREMENT PRIMARY KEY)
   - `cui_usuario` (VARCHAR(13), FOREIGN KEY ref `usuarios(cui)`)
