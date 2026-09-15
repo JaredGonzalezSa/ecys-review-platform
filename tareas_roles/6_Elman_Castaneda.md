@@ -29,11 +29,12 @@ Desarrollar el controlador `/backend/controllers/perfilController.js` y rutear e
 - **DELETE `/api/perfiles/cursos-aprobados/:codigo_curso`:**
   - Proveer la capacidad de remover un curso aprobado en caso de error del estudiante.
 
-### 3. Servicio Proxy del Catálogo JSON
+### 3. Catálogo de Cursos en Base de Datos
+- **Tabla `cursos`:**
+  - Crear el script SQL para la tabla `cursos` (codigo_curso VARCHAR(20) PRIMARY KEY, nombre VARCHAR(200) NOT NULL).
+  - Proveer un script de "Seeding" (población de datos) que lea el archivo provisional `cursos.json` solo una vez y realice los INSERTS iniciales en la base de datos para que todos tengan el catálogo oficial.
 - **GET `/api/cursos`:**
-  - En lugar de mantener la lógica de mapeo JSON dispersa en el Frontend, crearás un endpoint que oficie como catálogo global.
-  - Utilizar el módulo nativo `fs` (File System) de Node.js: `fs.readFileSync(path.resolve(__dirname, '../../cursos.json'), 'utf8')`.
-  - Retornar el archivo con el header correspondiente `Content-Type: application/json`.
+  - Crearás un endpoint que consulte la tabla `cursos` (`SELECT * FROM cursos`) y retorne el catálogo completo al Frontend.
 
 ## Dependencias Técnicas
 - **Pre-requisitos:** Tabla de usuarios base definida por Carlos. Servidor Express funcional.
@@ -66,4 +67,4 @@ Desarrollar el controlador `/backend/controllers/perfilController.js` y rutear e
 ## Criterios de Aceptación
 1. Endpoint GET de perfil retorna un objeto anidado consistente (Datos públicos del usuario + Lista de códigos de curso). No expone hashes de contraseña bajo ninguna circunstancia.
 2. Endpoint POST valida correctitud de token y maneja errores de duplicidad SQL de manera limpia (evita crashes del servidor Node.js devolviendo mensajes de error en JSON estructurado).
-3. El endpoint GET `/api/cursos` sirve la data en menos de 200ms leyendo del File System sin bloqueos asíncronos severos.
+3. El catálogo oficial de cursos persiste en MySQL y el endpoint GET `/api/cursos` retorna exitosamente todos los registros.

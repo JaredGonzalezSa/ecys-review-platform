@@ -12,7 +12,7 @@ Tu enfoque recae sobre la interacción de escritura de la plataforma. Deberás c
 - **Archivo:** `/frontend/src/components/CreatePost.jsx` (Puede renderizarse como una página separada `/create` o como un modal superior en `/home`).
 - **Manejo de Estado (UI):** Implementar dos `input type="radio"` para seleccionar tipo de referencia: `CURSO` o `CATEDRATICO`.
 - **Renderizado Dinámico:**
-  - Si el estado es `CURSO`, renderizar un `<select>` populado con los datos de `cursos.json`.
+  - Si el estado es `CURSO`, renderizar un `<select>` populado mediante una petición a `GET /api/cursos` (no debes leer el archivo JSON localmente).
   - Si el estado es `CATEDRATICO`, renderizar un `input type="text"`.
 - **Captura de texto:** Incorporar un `<textarea>` para el cuerpo de la reseña, aplicando validaciones de longitud (mínimo de caracteres).
 - **Transacción HTTP:** Al evento `onSubmit`, prevenir comportamiento default y ejecutar una petición POST mediante la instancia centralizada de Axios hacia `/api/publicaciones`, enviando el payload requerido. 

@@ -23,8 +23,8 @@ Tu enfoque principal es la experiencia de lectura del usuario (Pantalla Inicial/
 - **Archivo:** `/frontend/src/components/Filters.jsx` (Importado dentro de `Home.jsx`).
 - **Estructura:** Barra de herramientas superior con dos mecanismos de filtrado mutuamente excluyentes o complementarios.
 - **Filtro por Curso:**
-  - Importar directamente el archivo JSON: `import cursosData from '../../../cursos.json'`.
-  - Iterar el JSON y generar etiquetas `<option>` dentro de un `<select>`. Esto garantiza que los nombres enviados al backend sean 100% exactos y estandarizados.
+  - Consumir el endpoint `GET /api/cursos` creado por Elman al cargar el componente (usando un `useEffect` adicional).
+  - Iterar el array resultante y generar etiquetas `<option>` dentro de un `<select>`. Esto garantiza que los nombres enviados al backend sean 100% exactos y provengan de la base de datos central.
 - **Filtro por Catedrático:** Input de tipo `text`.
 - **Mecanismo de acción:** Al cambiar el valor de un filtro, actualizar un estado y disparar nuevamente la petición Axios adjuntando *Query Params* (ej. `axios.get('/api/publicaciones?curso=Mate2')`).
 
