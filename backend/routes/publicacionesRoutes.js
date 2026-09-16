@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const authMiddleware = require('../middlewares/authMiddleware');
-const publicacionesController = require('../controllers/Publicacionescontroller');
+const publicacionesController = require('../controllers/publicacionesController');
 
 // Crear publicación (requiere JWT válido)
 router.post('/', authMiddleware, publicacionesController.crearPublicacion);
