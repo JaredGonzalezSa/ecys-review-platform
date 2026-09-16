@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS ecys_db;
+USE ecys_db;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    cui VARCHAR(13) PRIMARY KEY,
+    nombres VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP
+);
