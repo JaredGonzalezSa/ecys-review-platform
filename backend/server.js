@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const authRoutes = require('./routes/authRoutes');
+const perfilRoutes = require('./routes/perfilRoutes');
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(express.json());
 
 // Rutas base
 app.use('/api/auth', authRoutes);
+app.use('/api/perfiles', perfilRoutes);
 
 // Ruta de prueba
 app.get('/api/health', (req, res) => {
