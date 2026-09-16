@@ -13,25 +13,25 @@ Tu misión es diseñar los puntos de acceso de la API que permitan gestionar la 
 - **Tabla `cursos_aprobados`:**
   - `id_registro` (INT AUTO_INCREMENT PRIMARY KEY)
   - `cui_usuario` (VARCHAR(13), FOREIGN KEY ref `usuarios(cui)`)
-  - `codigo_curso` (VARCHAR(20) NOT NULL).
-  - Restricción lógica: Definir una llave única combinada `UNIQUE(cui_usuario, codigo_curso)` para evitar inserciones duplicadas (que un alumno asigne el mismo curso dos veces).
+  - `id_curso` (INT NOT NULL). *(Nota: Este id_curso corresponde al campo "id" numérico del archivo cursos.json).*
+  - Restricción lógica: Definir una llave única combinada `UNIQUE(cui_usuario, id_curso)` para evitar inserciones duplicadas (que un alumno asigne el mismo curso dos veces).
 
 ### 2. Endpoints de Perfil Personalizado
 Desarrollar el controlador `/backend/controllers/perfilController.js` y rutear en `/backend/routes/perfilRoutes.js`.
 - **GET `/api/perfiles/:cui`:**
   - **Acción:** Consultar la tabla `usuarios` buscando el `cui` especificado.
   - **Seguridad y Serialización:** Excluir explícitamente el campo `password_hash` del SELECT. Retornar solo nombres, apellidos, y correo.
-  - **Datos Asociados:** Ejecutar una subconsulta o consulta separada para extraer todos los `codigo_curso` asociados a este usuario y empaquetarlos como un Array dentro del objeto JSON de respuesta.
+  - **Datos Asociados:** Ejecutar una subconsulta o consulta separada para extraer todos los `id_curso` asociados a este usuario y empaquetarlos como un Array dentro del objeto JSON de respuesta.
 - **POST `/api/perfiles/cursos-aprobados`:**
   - **Seguridad:** Requiere middleware JWT de autenticación. Extraer el `cui_usuario` emisor desde el JWT y no desde el body, para evitar suplantaciones de identidad.
-  - **Body esperado:** `codigo_curso`.
+  - **Body esperado:** `id_curso`.
   - **Acción:** Insertar en base de datos. Manejar correctamente la violación de llave única enviando un HTTP 409 Conflict si el estudiante ya tenía asignado ese curso.
-- **DELETE `/api/perfiles/cursos-aprobados/:codigo_curso`:**
+- **DELETE `/api/perfiles/cursos-aprobados/:id_curso`:**
   - Proveer la capacidad de remover un curso aprobado en caso de error del estudiante.
 
 ### 3. Catálogo de Cursos en Base de Datos
 - **Tabla `cursos`:**
-  - Crear el script SQL para la tabla `cursos` (codigo_curso VARCHAR(20) PRIMARY KEY, nombre VARCHAR(200) NOT NULL).
+  - Crear el script SQL para la tabla `cursos` (`id` INT PRIMARY KEY, `nombre_curso` VARCHAR(200) NOT NULL, `profesor` VARCHAR(200)).
   - Proveer un script de "Seeding" (población de datos) que lea el archivo provisional `cursos.json` solo una vez y realice los INSERTS iniciales en la base de datos para que todos tengan el catálogo oficial.
 - **GET `/api/cursos`:**
   - Crearás un endpoint que consulte la tabla `cursos` (`SELECT * FROM cursos`) y retorne el catálogo completo al Frontend.
