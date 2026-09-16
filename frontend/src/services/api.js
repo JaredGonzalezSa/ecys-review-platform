@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Instancia global de Axios
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api', // Ajusta esto si el puerto cambia
+  baseURL: 'http://localhost:3000', // Ajusta esto si el puerto cambia
 });
 
 // Interceptor para inyectar el token en cada petición
