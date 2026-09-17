@@ -3,6 +3,8 @@ const cors = require('cors');
 require('dotenv').config();
 
 const authRoutes = require('./routes/authRoutes');
+const perfilRoutes = require('./routes/perfilRoutes');
+const cursosRoutes = require('./routes/cursosRoutes');
 const publicacionesRoutes = require('./routes/publicacionesRoutes');
 const comentariosRoutes = require('./routes/comentariosRoutes');
 
@@ -14,6 +16,10 @@ app.use(express.json());
 
 // Rutas base
 app.use('/api/auth', authRoutes);
+
+app.use('/api/perfiles', perfilRoutes);
+app.use('/api/cursos', cursosRoutes);
+
 app.use('/api/publicaciones', publicacionesRoutes); // POST/GET publicaciones
 app.use('/api/publicaciones', comentariosRoutes);   // GET /:id/comentarios (comparte prefijo)
 app.use('/api/comentarios', comentariosRoutes);     // POST comentarios

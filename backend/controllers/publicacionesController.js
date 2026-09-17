@@ -57,8 +57,8 @@ exports.obtenerPublicaciones = async (req, res) => {
         p.nombre_referencia,
         p.mensaje,
         p.fecha_creacion,
-        u.nombre,
-        u.apellido
+        u.nombres,
+        u.apellidos
       FROM publicaciones p
       JOIN usuarios u ON p.cui_usuario = u.cui
       WHERE 1 = 1

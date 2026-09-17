@@ -1,4 +1,4 @@
-CREATE TABLE publicaciones (
+CREATE TABLE IF NOT EXISTS publicaciones (
   id_publicacion INT AUTO_INCREMENT PRIMARY KEY,
   cui_usuario VARCHAR(13) NOT NULL,
   tipo_referencia ENUM('CURSO','CATEDRATICO') NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE publicaciones (
   FOREIGN KEY (cui_usuario) REFERENCES usuarios(cui)
 );
 
-CREATE TABLE comentarios (
+CREATE TABLE IF NOT EXISTS comentarios (
   id_comentario INT AUTO_INCREMENT PRIMARY KEY,
   id_publicacion INT NOT NULL,
   cui_usuario VARCHAR(13) NOT NULL,
