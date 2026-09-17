@@ -1,0 +1,41 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--social-bg);
+  text-align: left;
+}
+
+.filters__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.filters__campo label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.filters__campo select,
+.filters__campo input {
+  font: inherit;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.filters__campo select:focus,
+.filters__campo input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
