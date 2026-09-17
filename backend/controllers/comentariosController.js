@@ -58,8 +58,8 @@ exports.obtenerComentariosPorPublicacion = async (req, res) => {
         c.cui_usuario,
         c.mensaje,
         c.fecha_creacion,
-        u.nombre,
-        u.apellido
+        u.nombres,
+        u.apellidos
       FROM comentarios c
       JOIN usuarios u ON c.cui_usuario = u.cui
       WHERE c.id_publicacion = ?
