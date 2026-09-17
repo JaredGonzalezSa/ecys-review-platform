@@ -6,20 +6,21 @@ import '../styles/auth.css';
 export default function ForgotPassword() {
   const [cui, setCui] = useState('');
   const [email, setEmail] = useState('');
+  const [newPassword, setNewPassword] = useState('');
   const [message, setMessage] = useState({ type: '', text: '' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage({ type: '', text: '' });
 
-    if (!cui || !email) {
+    if (!cui || !email || !newPassword) {
       setMessage({ type: 'error', text: 'Todos los campos son obligatorios.' });
       return;
     }
 
     try {
-      const res = await api.post('/api/auth/reset-password', { cui, email });
-      setMessage({ type: 'success', text: res.data.message || 'Instrucciones enviadas.' });
+      const res = await api.post('/api/auth/reset-password', { cui, email, newPassword });
+      setMessage({ type: 'success', text: res.data.message || 'Contraseña restablecida exitosamente.' });
     } catch (err) {
       setMessage({ 
         type: 'error', 
@@ -52,6 +53,13 @@ export default function ForgotPassword() {
             placeholder="Correo Electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="auth-input"
+          />
+          <input
+            type="password"
+            placeholder="Nueva Contraseña"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
             className="auth-input"
           />
           <button type="submit" className="auth-button">
