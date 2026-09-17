@@ -3,13 +3,9 @@ import api from '../services/api';
 import cursosLocales from '../data/cursos.json';
 import './Filters.css';
 
-/**
- * Extrae un nombre de curso "limpio" desde el catálogo local `cursos.json`,
- * evitando nombres duplicados en el <select>.
- */
-function obtenerNombresUnicos(cursos) {
-  const nombres = cursos.map((curso) => curso.nombre_curso ?? curso.nombre).filter(Boolean);
-  return Array.from(new Set(nombres)).sort((a, b) => a.localeCompare(b, 'es'));
+function obtenerValoresUnicos(arreglo, propiedad) {
+  const valores = arreglo.map((item) => item[propiedad]).filter(Boolean);
+  return Array.from(new Set(valores)).sort((a, b) => a.localeCompare(b, 'es'));
 }
 
 /**
@@ -23,6 +19,7 @@ function obtenerNombresUnicos(cursos) {
  */
 function Filters({ onFiltrosChange }) {
   const [cursos, setCursos] = useState([]);
+  const [profesores, setProfesores] = useState([]);
   const [curso, setCurso] = useState('');
   const [catedratico, setCatedratico] = useState('');
 
@@ -33,20 +30,26 @@ function Filters({ onFiltrosChange }) {
       try {
         const respuesta = await api.get('/api/cursos');
         const datos = respuesta.data?.data ?? respuesta.data ?? [];
-        const nombres = obtenerNombresUnicos(
-          datos.map((c) => ({ nombre_curso: c.nombre ?? c.nombre_curso }))
-        );
+        
+        // Estandarizar nombre_curso
+        const datosLimpios = datos.map(c => ({ ...c, nombre_curso: c.nombre_curso ?? c.nombre }));
+        
+        const nombresCursos = obtenerValoresUnicos(datosLimpios, 'nombre_curso');
+        const nombresProfesores = obtenerValoresUnicos(datosLimpios, 'profesor');
 
-        if (activo && nombres.length > 0) {
-          setCursos(nombres);
+        if (activo && nombresCursos.length > 0) {
+          setCursos(nombresCursos);
+          setProfesores(nombresProfesores);
         } else if (activo) {
-          setCursos(obtenerNombresUnicos(cursosLocales));
+          setCursos(obtenerValoresUnicos(cursosLocales, 'nombre_curso'));
+          setProfesores(obtenerValoresUnicos(cursosLocales, 'profesor'));
         }
       } catch (error) {
-        // GET /api/cursos todavía no está desplegado por Elman: se usa el
-        // catálogo local como respaldo temporal.
         console.warn('No se pudo consultar /api/cursos, usando cursos.json local.', error);
-        if (activo) setCursos(obtenerNombresUnicos(cursosLocales));
+        if (activo) {
+          setCursos(obtenerValoresUnicos(cursosLocales, 'nombre_curso'));
+          setProfesores(obtenerValoresUnicos(cursosLocales, 'profesor'));
+        }
       }
     }
 
@@ -66,29 +69,34 @@ function Filters({ onFiltrosChange }) {
     <div className="filters">
       <div className="filters__campo">
         <label htmlFor="filtro-curso">Curso</label>
-        <select
+        <input
           id="filtro-curso"
+          list="lista-cursos-filtro"
+          placeholder="Todos los cursos (escribe para buscar)"
           value={curso}
           onChange={(e) => setCurso(e.target.value)}
-        >
-          <option value="">Todos los cursos</option>
+        />
+        <datalist id="lista-cursos-filtro">
           {cursos.map((nombreCurso) => (
-            <option key={nombreCurso} value={nombreCurso}>
-              {nombreCurso}
-            </option>
+            <option key={nombreCurso} value={nombreCurso} />
           ))}
-        </select>
+        </datalist>
       </div>
 
       <div className="filters__campo">
         <label htmlFor="filtro-catedratico">Catedrático</label>
         <input
           id="filtro-catedratico"
-          type="text"
+          list="lista-profesores-filtro"
           placeholder="Buscar por nombre de catedrático..."
           value={catedratico}
           onChange={(e) => setCatedratico(e.target.value)}
         />
+        <datalist id="lista-profesores-filtro">
+          {profesores.map((profesor) => (
+            <option key={profesor} value={profesor} />
+          ))}
+        </datalist>
       </div>
     </div>
   );

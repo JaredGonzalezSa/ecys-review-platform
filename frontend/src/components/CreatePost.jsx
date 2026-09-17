@@ -8,6 +8,10 @@ const CreatePost = ({ onPostCreated }) => {
   // Lista de cursos traídos desde el backend
   const [cursos, setCursos] = useState([]);
   
+  // Derivar listas únicas
+  const cursosUnicos = Array.from(new Set(cursos.map(c => c.nombre_curso).filter(Boolean))).sort((a,b) => a.localeCompare(b, 'es'));
+  const profesoresUnicos = Array.from(new Set(cursos.map(c => c.profesor).filter(Boolean))).sort((a,b) => a.localeCompare(b, 'es'));
+  
   // Datos del formulario
   const [cursoSeleccionado, setCursoSeleccionado] = useState('');
   const [nombreCatedratico, setNombreCatedratico] = useState('');
@@ -108,25 +112,26 @@ const CreatePost = ({ onPostCreated }) => {
         {/* Renderizado Dinámico */}
         {tipoReferencia === 'CURSO' ? (
           <div style={{ marginBottom: '15px' }}>
-            <label style={{ display: 'block', marginBottom: '5px' }}>Selecciona un Curso:</label>
-            <select
+            <label style={{ display: 'block', marginBottom: '5px' }}>Selecciona o escribe un Curso:</label>
+            <input
+              list="datalist-cursos"
               value={cursoSeleccionado}
               onChange={(e) => setCursoSeleccionado(e.target.value)}
+              placeholder="Ej. Análisis y Diseño de Sistemas 1"
               required
               style={{ width: '100%', padding: '8px' }}
-            >
-              <option value="">-- Selecciona un curso --</option>
-              {cursos.map((curso) => (
-                <option key={curso.id} value={curso.nombre_curso} style={{ color: 'black' }}>
-                  {curso.nombre_curso}
-                </option>
+            />
+            <datalist id="datalist-cursos">
+              {cursosUnicos.map((nombreCurso) => (
+                <option key={nombreCurso} value={nombreCurso} />
               ))}
-            </select>
+            </datalist>
           </div>
         ) : (
           <div style={{ marginBottom: '15px' }}>
-            <label style={{ display: 'block', marginBottom: '5px' }}>Nombre del Catedrático:</label>
+            <label style={{ display: 'block', marginBottom: '5px' }}>Selecciona o escribe el Catedrático:</label>
             <input
+              list="datalist-catedraticos"
               type="text"
               value={nombreCatedratico}
               onChange={(e) => setNombreCatedratico(e.target.value)}
@@ -134,6 +139,11 @@ const CreatePost = ({ onPostCreated }) => {
               required
               style={{ width: '100%', padding: '8px' }}
             />
+            <datalist id="datalist-catedraticos">
+              {profesoresUnicos.map((profesor) => (
+                <option key={profesor} value={profesor} />
+              ))}
+            </datalist>
           </div>
         )}
 
