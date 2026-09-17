@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../services/api';
 
 const CreatePost = ({ onPostCreated }) => {
   // Estado para controlar qué opción está seleccionada ('CURSO' o 'CATEDRATICO')
@@ -20,7 +20,7 @@ const CreatePost = ({ onPostCreated }) => {
   // useEffect para cargar los cursos solo si la opción seleccionada es 'CURSO'
   useEffect(() => {
     if (tipoReferencia === 'CURSO') {
-      axios.get('/api/cursos')
+      api.get('/api/cursos')
         .then((response) => {
           setCursos(response.data);
         })
@@ -40,11 +40,11 @@ const CreatePost = ({ onPostCreated }) => {
       return;
     }
 
-    // Armar el objeto según lo seleccionado
+    // Armar el objeto según lo seleccionado para el backend
     const payload = {
-      tipo: tipoReferencia,
-      referencia: tipoReferencia === 'CURSO' ? cursoSeleccionado : nombreCatedratico,
-      contenido: contenido
+      tipo_referencia: tipoReferencia,
+      nombre_referencia: tipoReferencia === 'CURSO' ? cursoSeleccionado : nombreCatedratico,
+      mensaje: contenido
     };
 
     try {
@@ -52,7 +52,7 @@ const CreatePost = ({ onPostCreated }) => {
       setMensaje('');
 
       // Petición POST al servidor usando la instancia centralizada
-      const response = await axios.post('/api/publicaciones', payload);
+      const response = await api.post('/api/publicaciones', payload);
 
       if (response.status === 201 || response.status === 200) {
         setMensaje('¡Publicación creada con éxito!');

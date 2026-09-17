@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../services/api';
 
 const CommentSection = ({ id_publicacion }) => {
   // Estado para la lista de comentarios
@@ -15,9 +15,9 @@ const CommentSection = ({ id_publicacion }) => {
   // Cargar comentarios al montar el componente o si cambia el ID de la publicación
   useEffect(() => {
     if (id_publicacion) {
-      axios.get(`/api/publicaciones/${id_publicacion}/comentarios`)
+      api.get(`/api/publicaciones/${id_publicacion}/comentarios`)
         .then((response) => {
-          setComentarios(response.data);
+          setComentarios(response.data.data || response.data);
         })
         .catch((err) => {
           console.error('Error al obtener comentarios:', err);
@@ -33,7 +33,7 @@ const CommentSection = ({ id_publicacion }) => {
 
     const payload = {
       id_publicacion: id_publicacion,
-      texto: nuevoComentario
+      mensaje: nuevoComentario
     };
 
     try {
@@ -41,11 +41,11 @@ const CommentSection = ({ id_publicacion }) => {
       setError('');
 
       // Enviar el comentario al backend
-      const response = await axios.post('/api/comentarios', payload);
+      const response = await api.post('/api/comentarios', payload);
 
       if (response.status === 201 || response.status === 200) {
         // Optimización UX: agregar el comentario devuelto directamente al estado local
-        const comentarioCreado = response.data.comentario || response.data;
+        const comentarioCreado = response.data.data || response.data;
         setComentarios((prev) => [...prev, comentarioCreado]);
 
         // Limpiar la caja de texto
@@ -73,8 +73,9 @@ const CommentSection = ({ id_publicacion }) => {
           </p>
         ) : (
           comentarios.map((c, index) => (
-            <div key={c.id || index} style={{ background: '#f9f9f9', padding: '8px', borderRadius: '4px', marginBottom: '6px' }}>
-              <p style={{ margin: 0, fontSize: '14px' }}>{c.texto || c.contenido}</p>
+            <div key={c.id_comentario || index} style={{ background: '#f9f9f9', padding: '8px', borderRadius: '4px', marginBottom: '6px' }}>
+              <p style={{ margin: 0, fontSize: '14px', fontWeight: 'bold' }}>{c.nombres ? `${c.nombres} ${c.apellidos}` : 'Usuario'}</p>
+              <p style={{ margin: 0, fontSize: '14px' }}>{c.mensaje}</p>
             </div>
           ))
         )}
