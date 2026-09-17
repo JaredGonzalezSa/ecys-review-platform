@@ -1,87 +1,78 @@
 # Manual Técnico - ECYS Review Platform
 
-Este documento proporciona una visión en profundidad de la arquitectura, tecnologías, funcionamiento interno y código de **ECYS Review Platform**. Está diseñado para futuros desarrolladores o ingenieros de software que deseen dar mantenimiento, escalar o estudiar la plataforma.
+Este documento proporciona una visión en profundidad de la arquitectura, tecnologías y funcionamiento interno de ECYS Review Platform. 
 
 ---
 
 ## 1. Tecnologías Utilizadas
 
-El sistema fue desarrollado bajo una arquitectura **Monorepo**, consolidando de forma ordenada el Backend y Frontend del aplicativo, lo cual facilita la gestión de dependencias y el control de versiones.
+El sistema fue desarrollado bajo una arquitectura **Monorepo** que consolida de forma ordenada el Backend y Frontend de la aplicación.
 
-### Frontend
-*   **React + Vite:** Utilizado para construir una Single Page Application (SPA) extremadamente rápida.
-*   **Enrutamiento:** `react-router-dom` maneja las vistas (Login, Registro, Recuperación, Home, Perfil).
-*   **Estilos:** CSS Vanilla con diseño **Glassmorphism**, brindando transparencias y efectos de desenfoque.
-*   **Peticiones HTTP:** Se construyó una instancia global de `axios` (`services/api.js`) para interceptar y adjuntar automáticamente los tokens de seguridad a cada petición.
-
-### Backend
-*   **Entorno:** Node.js v18+ y Express.js.
-*   **Seguridad:** 
-    *   `bcrypt`: Para el hasheo de contraseñas de una sola vía (Salt rounds: 10).
-    *   `jsonwebtoken` (JWT): Para la autenticación *stateless*.
-*   **Base de Datos:** TiDB Cloud Serverless (Compatible con MySQL).
-    *   `mysql2/promise`: Librería para manejar consultas asíncronas con Promesas/Async-Await, previniendo el uso de callbacks anidados.
+*   **Frontend:** Desarrollado con **React** bajo el entorno de **Vite**. Se utilizaron librerías modernas como `react-router-dom` para la navegación y `axios` para consumo de APIs. Estilos implementados en **CSS Vanilla** con un enfoque premium (Glassmorphism).
+*   **Backend:** Construido con **Node.js** y **Express**. Para la seguridad, se utiliza `bcrypt` para encriptar contraseñas y `jsonwebtoken` para la autenticación sin estado (stateless).
+*   **Base de Datos:** **TiDB MySQL Serverless Cloud** alojando toda la persistencia de los datos en la nube. Conexión gestionada mediante `mysql2/promise`.
 
 ---
 
 ## 2. Arquitectura del Sistema
 
-El flujo de información es estrictamente unidireccional (Cliente -> API -> Base de Datos). La API sirve como una capa protectora y mediadora.
+La arquitectura sigue el modelo Cliente-Servidor separando las responsabilidades de UI y Lógica de Negocios de forma clara mediante peticiones RESTful.
 
 ```mermaid
 architecture-beta
     group frontend(server)[Frontend SPA (React / Vite)]
     group backend(server)[Backend API (Node + Express)]
-    group cloud(cloud)[TiDB Cloud Serverless]
+    group cloud(cloud)[TiDB Cloud]
 
-    service App(disk)[Navegador Web] in frontend
-    service Router(server)[React Router] in frontend
-    
-    service API(server)[Express Rutas y Controladores] in backend
-    service Middleware(server)[Auth verifyToken] in backend
-    
-    service DB(database)[Base de Datos MySQL] in cloud
+    service App(disk)[React App] in frontend
+    service API(server)[Express API] in backend
+    service DB(database)[MySQL] in cloud
 
-    App:R -- L:Router
-    Router:R -- L:API
-    API:B -- T:Middleware
+    App:R -- L:API
     API:R -- L:DB
 ```
 
 ---
 
-## 3. Modelo Físico de Base de Datos (E-R)
+## 3. Modelo de Base de Datos (Entidad-Relación)
 
-A diferencia de un diagrama conceptual, este es el diagrama **Físico y Real** desplegado en TiDB. Nota cómo el concepto de "Perfil" en realidad se deriva lógicamente de los datos del `usuario` y sus `cursos_aprobados`, evitando así una tabla redundante.
+La base de datos se normalizó para prevenir redundancia, contando con tablas de usuarios, perfiles, catálogos (cursos) y datos dinámicos (publicaciones, comentarios, cursos aprobados).
 
 ```mermaid
 erDiagram
     USUARIOS {
-        varchar(13) cui PK
-        varchar(100) nombres
-        varchar(100) apellidos
-        varchar(100) email UK
-        varchar(255) password_hash
-        datetime fecha_registro
+        int registro_academico PK
+        varchar nombres
+        varchar apellidos
+        varchar password
+        varchar correo
     }
     
+    PERFIL {
+        int id_perfil PK
+        int registro_academico FK
+        varchar descripcion
+        varchar fotoperfil
+        int creditos
+    }
+
     CURSOS {
         int id PK
-        varchar(200) nombre_curso
-        varchar(200) profesor
+        varchar nombre_curso
+        varchar profesor
     }
 
     CURSOS_APROBADOS {
-        int id_registro PK
-        varchar(13) cui_usuario FK
-        int id_curso FK
+        int id PK
+        int id_perfil FK
+        int codigo_curso FK
     }
 
     PUBLICACIONES {
         int id_publicacion PK
-        varchar(13) cui_usuario FK
-        enum tipo_referencia "CURSO, CATEDRATICO"
-        varchar(200) nombre_referencia
+        int registro_academico FK
+        varchar tipo_referencia
+        varchar nombre_referencia
         text mensaje
         datetime fecha_creacion
     }
@@ -89,97 +80,62 @@ erDiagram
     COMENTARIOS {
         int id_comentario PK
         int id_publicacion FK
-        varchar(13) cui_usuario FK
+        int registro_academico FK
         text mensaje
         datetime fecha_creacion
     }
 
+    USUARIOS ||--o| PERFIL : "posee un"
     USUARIOS ||--o{ PUBLICACIONES : "crea"
     USUARIOS ||--o{ COMENTARIOS : "escribe"
     PUBLICACIONES ||--o{ COMENTARIOS : "contiene"
-    USUARIOS ||--o{ CURSOS_APROBADOS : "estudia"
-    CURSOS ||--o{ CURSOS_APROBADOS : "es aprobado en"
+    PERFIL ||--o{ CURSOS_APROBADOS : "aprueba"
 ```
 
 ---
 
-## 4. Endpoints y Controladores (REST)
+## 4. Endpoints de la API (REST)
 
-El backend expone módulos controlados que validan la entrada de datos.
+El backend de Express expone las siguientes rutas modulares:
 
 ### 4.1 Autenticación (`/api/auth`)
-Encargada de generar accesos. Destaca la lógica de hasheo de contraseñas, por ejemplo, en `register`:
-```javascript
-// backend/controllers/authController.js
-const hashedPassword = await bcrypt.hash(password, 10);
-await db.query(
-  'INSERT INTO usuarios (cui, nombres, apellidos, email, password_hash) VALUES (?, ?, ?, ?, ?)',
-  [cui, nombres, apellidos, email, hashedPassword]
-);
-```
+*   `POST /register`: Encripta la contraseña y almacena el registro. Retorna JWT.
+*   `POST /login`: Valida credenciales. Retorna JWT.
+*   `POST /forgot-password`: Permite actualizar la contraseña basado en validación de registro académico.
 
-### 4.2 Lógica de Perfil Lógico (`/api/perfil`)
-Aunque no existe una tabla perfil, el `perfilController.js` consolida la información usando los Cursos Aprobados:
-*   `GET /:cui`: Retorna los detalles.
-*   `POST /:cui/cursos-aprobados`: Vincula cursos aprobados al usuario.
+### 4.2 Perfiles (`/api/perfil`)
+*   `GET /:registro_academico`: Retorna los detalles del perfil del usuario (créditos, descripción).
+*   `PUT /:registro_academico`: Actualiza parámetros del perfil y avatares.
+*   `POST /:registro_academico/cursos-aprobados`: Vincula cursos aprobados al perfil.
 
-### 4.3 Gestión del Feed (`/api/publicaciones` y `/api/comentarios`)
-El controlador de publicaciones realiza búsquedas avanzadas y permite filtrar por `curso` o `catedratico` desde el Frontend. Cuando el Frontend hace GET, el Backend utiliza cláusulas `WHERE` condicionales:
+### 4.3 Publicaciones (`/api/publicaciones`)
+*   `POST /`: Crea una nueva publicación asignada al JWT extraído del middleware de autorización.
+*   `GET /`: Obtiene el Feed completo. Admite Query Params (`?curso=...` y `?catedratico=...`) para la filtración desde Base de Datos.
+*   `GET /:id/comentarios`: Consulta todos los comentarios vinculados a una publicación uniendo con la tabla usuarios (JOIN) para proveer nombres y apellidos de los autores.
 
-```javascript
-// backend/controllers/publicacionesController.js
-let query = `
-  SELECT p.*, u.nombres, u.apellidos
-  FROM publicaciones p
-  JOIN usuarios u ON p.cui_usuario = u.cui
-  WHERE 1=1
-`;
-if (curso) query += ` AND p.nombre_referencia = ?`;
-```
+### 4.4 Comentarios (`/api/comentarios`)
+*   `POST /`: Registra el comentario hacia una publicación (`id_publicacion`) desde el usuario autorizado.
+
+### 4.5 Cursos (`/api/cursos`)
+*   `GET /`: Expone el catálogo estandarizado e inicializado por los scripts *seeder* (`seed-cursos.js`) de forma que el cliente web pueda renderizar y extraer listas de cursos y catedráticos para datalists de UI de manera dinámica.
 
 ---
 
-## 5. Implementación del Middleware de Seguridad
+## 5. Middleware y Seguridad
 
-Todas las rutas sensibles están envueltas en el middleware `verifyToken.js`. El frontend adjunta el token en sus peticiones a través de la instancia de `axios`.
-
+Todas las rutas privadas en el sistema interceptan las peticiones a través de `verifyToken.js`.
 ```mermaid
 sequenceDiagram
-    participant Cliente as Frontend (React + Axios)
-    participant API as Express Router
-    participant AuthMW as Middleware (verifyToken.js)
-    participant DB as TiDB (Controladores)
+    participant Cliente as Frontend (React)
+    participant AuthMW as Middleware (verifyToken)
+    participant Controlador as Controlador
     
-    Cliente->>API: GET /api/publicaciones 
-    Note right of Cliente: Headers: { Authorization: "Bearer xyz..." }
-    API->>AuthMW: Ejecuta next() o bloquea
-    AuthMW->>AuthMW: jwt.verify(token, process.env.JWT_SECRET)
-    
-    alt Firma Inválida o Expirado
-        AuthMW-->>Cliente: 401/403 Unauthorized (Bloqueo)
+    Cliente->>AuthMW: Request a API Privada + Header: Bearer <JWT>
+    AuthMW->>AuthMW: Decodifica JWT Secret Key
+    alt Token Inválido o Ausente
+        AuthMW-->>Cliente: 401/403 Unauthorized
     else Token Válido
-        AuthMW->>API: Asigna req.user = payload; next()
-        API->>DB: db.query(...)
-        DB-->>API: RowDataPacket[]
-        API-->>Cliente: 200 OK + JSON Response
+        AuthMW->>Controlador: req.user = payload y next()
+        Controlador-->>Cliente: 200 OK + Data
     end
 ```
-
-### Inyección de Axios (Frontend)
-Para asegurar que toda la SPA se comunique con esta seguridad sin escribir el código mil veces, se diseñó la siguiente configuración en `frontend/src/services/api.js`:
-```javascript
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('token');
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
-```
-
----
-
-## 6. Recomendaciones para el Despliegue
-- La Base de Datos (TiDB) ya está alojada en la nube por lo que no requiere instancias locales.
-- **Backend:** Se recomienda usar PM2 para mantener los procesos activos (`pm2 start server.js`).
-- **Frontend:** Se recomienda construir los assets estáticos usando `npm run build` y servirlos con Nginx o subirlos a plataformas como Vercel/Netlify.
