@@ -31,7 +31,7 @@ function Filters({ onFiltrosChange }) {
 
     async function cargarCursos() {
       try {
-        const respuesta = await api.get('/cursos');
+        const respuesta = await api.get('/api/cursos');
         const datos = respuesta.data?.data ?? respuesta.data ?? [];
         const nombres = obtenerNombresUnicos(
           datos.map((c) => ({ nombre_curso: c.nombre ?? c.nombre_curso }))

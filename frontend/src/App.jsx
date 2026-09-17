@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import Profile from './pages/Profile';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/profile" element={<Profile />} />
           
-          {/* Rutas de Abner (Pendientes de implementar) */}
-          <Route path="/home" element={<h2>Home / Feed de Reseñas (En construcción)</h2>} />
+          {/* Ruta Principal: Feed de Reseñas */}
+          <Route path="/home" element={<Home />} />
 
           {/* Redirección por defecto */}
           <Route path="*" element={<Navigate to="/login" replace />} />
