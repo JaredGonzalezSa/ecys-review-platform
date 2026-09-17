@@ -1,0 +1,1155 @@
+[
+  {
+    "id": 1,
+    "nombre_curso": "Análisis y Diseño de Sistemas 1 (Sección A)",
+    "profesor": "GUEVARA ORELLANA, WILLIAM SAMUEL",
+    "practicante_final": [
+      "Solís González, Byron Estuardo"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, MEET",
+      "Jueves: 07:10:00 - 08:50:00, MEET"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre_curso": "Análisis y Diseño de Sistemas 1 (Sección B)",
+    "profesor": "RODAS ROBLEDO, EDGAR FRANCISCO",
+    "practicante_final": [
+      "Martinez Huit, Douglas Josue"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, VIRTUAL"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre_curso": "Análisis y Diseño de Sistemas 2 (Sección A)",
+    "profesor": "ROJAS MORALES, CLAUDIA LICETH",
+    "practicante_final": [
+      "Hernández Gómez, Kevin Josué"
+    ],
+    "detalles": [
+      "Lunes: 17:20:00 - 19:00:00, SEMIPRECENCIAL",
+      "Martes: 17:20:00 - 19:00:00, SEMIPRECENCIAL"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre_curso": "Análisis y Diseño de Sistemas 2 (Sección B)",
+    "profesor": "ALDANA LARRAZABAL, MIRNA IVONNE",
+    "practicante_final": [
+      "Otzoy Otzín, Abdiel Fernando José",
+      "Aragón Bámaca, Juan Carlos"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, meet",
+      "Jueves: 07:10:00 - 08:50:00, meet"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre_curso": "Análisis y Diseño de Sistemas 2 (Sección B)",
+    "profesor": "ALDANA LARRAZABAL, MIRNA IVONNE",
+    "practicante_final": [
+      "Otzoy Otzín, Abdiel Fernando José",
+      "Aragón Bámaca, Juan Carlos"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 09:00:00",
+      "Jueves: 07:10:00 - 09:00:00"
+    ]
+  },
+  {
+    "id": 6,
+    "nombre_curso": "Arquitectura de Computadoras y Ensambladores 1 (Sección A)",
+    "profesor": "ESCOBAR LEIVA, OTTO RENE",
+    "practicante_final": [
+      "Barrientos López, Carlos Alfredo"
+    ],
+    "detalles": [
+      "Martes: 10:40:00 - 12:20:00, Meet",
+      "Jueves: 10:40:00 - 12:20:00, Meet"
+    ]
+  },
+  {
+    "id": 7,
+    "nombre_curso": "Arquitectura de Computadoras y Ensambladores 1 (Sección B)",
+    "profesor": "ESCOBAR LEIVA, OTTO RENE",
+    "practicante_final": [
+      "Guevara Abaj, Diego Josue"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, Meet"
+    ]
+  },
+  {
+    "id": 8,
+    "nombre_curso": "Arquitectura de Computadoras y Ensambladores 2 (Sección A)",
+    "profesor": "DÍAZ LÓPEZ, GABRIEL ALEJANDRO",
+    "practicante_final": [
+      "Cux Barrientos, Josué Antonio",
+      "Pérez Secay, Marcos Geovani Josías"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, T1 - L-II-1"
+    ]
+  },
+  {
+    "id": 9,
+    "nombre_curso": "Arquitectura de Computadoras y Ensambladores 2 (Sección A)",
+    "profesor": "DÍAZ LÓPEZ, GABRIEL ALEJANDRO",
+    "practicante_final": [
+      "Cux Barrientos, Josué Antonio",
+      "Pérez Secay, Marcos Geovani Josías"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, T1 - L-II-1"
+    ]
+  },
+  {
+    "id": 10,
+    "nombre_curso": "Arquitectura de Computadoras y Ensambladores 2(Sección B)",
+    "profesor": "RAMIREZ RAMIREZ, JURGEN ANDONI",
+    "practicante_final": [
+      "Alvarado Asensio, Irving Fernando",
+      "Mazariegos Samayoa, Wendy Lucia"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, Meet"
+    ]
+  },
+  {
+    "id": 11,
+    "nombre_curso": "Arquitectura de Computadoras y Ensambladores 2(Sección B)",
+    "profesor": "RAMIREZ RAMIREZ, JURGEN ANDONI",
+    "practicante_final": [
+      "Alvarado Asensio, Irving Fernando",
+      "Mazariegos Samayoa, Wendy Lucia"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, https://meet.google.com/sky-yzdm-ydv"
+    ]
+  },
+  {
+    "id": 12,
+    "nombre_curso": "Bases de Datos 1 (Sección B)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Rafael Morales, Allan Josué",
+      "Fernández Rodríguez, Julio Alfredo",
+      "Ruiz Perez, Estephanie Alejandra"
+    ],
+    "detalles": [
+      "Miercoles: 07:10:00 - 10:40:00, Meet"
+    ]
+  },
+  {
+    "id": 13,
+    "nombre_curso": "Bases de Datos 1 (Sección B)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Rafael Morales, Allan Josué",
+      "Fernández Rodríguez, Julio Alfredo",
+      "Ruiz Perez, Estephanie Alejandra"
+    ],
+    "detalles": [
+      "Miercoles: 07:10:00 - 10:40:00, MEET"
+    ]
+  },
+  {
+    "id": 14,
+    "nombre_curso": "Bases de Datos 1 (Sección B)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Rafael Morales, Allan Josué",
+      "Fernández Rodríguez, Julio Alfredo",
+      "Ruiz Perez, Estephanie Alejandra"
+    ],
+    "detalles": [
+      "Miercoles: 13:10:00 - 14:00:00, HIBR",
+      "Viernes: 12:20:00 - 13:10:00, HIBR"
+    ]
+  },
+  {
+    "id": 15,
+    "nombre_curso": "Bases de Datos 1(Sección N)",
+    "profesor": "LONGO MORALES, ALVARO GIOVANNI",
+    "practicante_final": [
+      "Reyes Melgar, Matthew Emmanuel"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, meet"
+    ]
+  },
+  {
+    "id": 16,
+    "nombre_curso": "Bases de Datos 2 (Sección B)",
+    "profesor": "ARIAS, LUIS ALBERTO",
+    "practicante_final": [
+      "Olivarez Cruz, Otto Roman"
+    ],
+    "detalles": [
+      "Miercoles: 07:10:00 - 08:50:00, UEDI",
+      "Sabado: 07:10:00 - 08:50:00, UEDI"
+    ]
+  },
+  {
+    "id": 17,
+    "nombre_curso": "Bases de Datos 2 (Sección N)",
+    "profesor": "RODRIGUEZ ACOSTA, OTTO AMILCAR",
+    "practicante_final": [
+      "Vásquez del Aguila, Joshua Alexander"
+    ],
+    "detalles": [
+      "Lunes: 19:00:00 - 20:40:00, meet: https://meet.google.com/fyg-kxud-npm",
+      "Miercoles: 19:00:00 - 20:40:00, meet: https://meet.google.com/fyg-kxud-npm"
+    ]
+  },
+  {
+    "id": 18,
+    "nombre_curso": "Comunicación Asertiva(Sección A)",
+    "profesor": null,
+    "practicante_final": [
+      "Santos Salazar, Kevin Josue"
+    ],
+    "detalles": [
+      "Lunes: 09:00:00 - 10:40:00, Salón Google Meet",
+      "Miercoles: 09:00:00 - 10:40:00, Salón Google Meet"
+    ]
+  },
+  {
+    "id": 19,
+    "nombre_curso": "Comunicación Asertiva(Sección B)",
+    "profesor": null,
+    "practicante_final": [
+      "López Garcia, Carlos Fernando Enrique"
+    ],
+    "detalles": [
+      "Viernes: 07:10:00 - 10:40:00, Meet"
+    ]
+  },
+  {
+    "id": 20,
+    "nombre_curso": "Economía (Sección A+)",
+    "profesor": "RALDA RECINOS, ILEANA GUISELA",
+    "practicante_final": [
+      "Sotoj García, Kevin Estuardo"
+    ],
+    "detalles": [
+      "Sabado: 10:30:00 - 12:10:00, https://meet.google.com/qbc-hfhe-tko"
+    ]
+  },
+  {
+    "id": 21,
+    "nombre_curso": "Economía (Sección A-)",
+    "profesor": "MORALES RUIZ, EVELYN CAROLINA",
+    "practicante_final": [
+      "Otzoy Otzín, Abdiel Fernando José"
+    ],
+    "detalles": [
+      "Sabado: 10:30:00 - 12:10:00, meet"
+    ]
+  },
+  {
+    "id": 22,
+    "nombre_curso": "Estructura de Datos (Sección A)",
+    "profesor": "ORNELIS HOIL, EDGAR RENE",
+    "practicante_final": [
+      "Concohá Cax, Giovanni Saul"
+    ],
+    "detalles": [
+      "Miercoles: 07:10:00 - 08:50:00, Meet",
+      "Viernes: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 23,
+    "nombre_curso": "Estructura de Datos (Sección B)",
+    "profesor": "HERNANDEZ GARCIA, ALVARO OBRAYAN",
+    "practicante_final": [
+      "Pablo Sosof, Jens Jeremy"
+    ],
+    "detalles": [
+      "Miercoles: 07:10:00 - 08:50:00, Meet",
+      "Sabado: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 24,
+    "nombre_curso": "Estructura de Datos(Sección C)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Sandoval Ruiz, Sergio Sebastián"
+    ],
+    "detalles": []
+  },
+  {
+    "id": 25,
+    "nombre_curso": "Gerenciales 2 (Sección N)",
+    "profesor": "BAUTISTA FUENTES, MARIO JOSE",
+    "practicante_final": [
+      "Santos Colindres, William Alexander"
+    ],
+    "detalles": [
+      "Martes: 19:00:00 - 20:40:00, MEET",
+      "Jueves: 19:00:00 - 20:40:00, MEET"
+    ]
+  },
+  {
+    "id": 26,
+    "nombre_curso": "Gerenciales 2 (Sección P)",
+    "profesor": "VETTORAZZI ESPANA, LUIS ALBERTO",
+    "practicante_final": [
+      "Amezquita Vargas, Luis Alberto"
+    ],
+    "detalles": []
+  },
+  {
+    "id": 27,
+    "nombre_curso": "Inteligencia Artificial 1 (Sección A)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Bonilla Salazar, José Javier",
+      "García Santizo, Roberto Miguel"
+    ],
+    "detalles": [
+      "Martes: 18:10:00 - 19:00:00, Virtual",
+      "Jueves: 18:10:00 - 19:00:00, Virtual"
+    ]
+  },
+  {
+    "id": 28,
+    "nombre_curso": "Inteligencia Artificial 1 (Sección A)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Bonilla Salazar, José Javier",
+      "García Santizo, Roberto Miguel"
+    ],
+    "detalles": [
+      "Lunes: 07:00:00 - 10:30:00, https://meet.google.com/jmi-nodm-xan"
+    ]
+  },
+  {
+    "id": 29,
+    "nombre_curso": "Inteligencia Artificial 1 (Sección B)",
+    "profesor": null,
+    "practicante_final": [
+      "Ixchop Ordoñez, Alberto Kanec"
+    ],
+    "detalles": [
+      "Lunes: 07:10:00 - 10:40:00, Virtual"
+    ]
+  },
+  {
+    "id": 30,
+    "nombre_curso": "Introducción a la Programación y Computación 1 (Sección A)",
+    "profesor": "ORELLANA LOPEZ, MARLON FRANCISCO",
+    "practicante_final": [
+      "Robles Meza, Diego Abraham"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, Google Meet"
+    ]
+  },
+  {
+    "id": 31,
+    "nombre_curso": "Introducción a la Programación y Computación 1 (Sección B)",
+    "profesor": "ESCOBAR ARGUETA, WILLIAM ESTUARDO",
+    "practicante_final": [
+      "Vicente Velasquez, Fernando Jose"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, Google Meet",
+      "Jueves: 07:10:00 - 08:50:00, Google Meet"
+    ]
+  },
+  {
+    "id": 32,
+    "nombre_curso": "Introducción a la Programación y Computación 1 (Sección C)",
+    "profesor": "VELASQUEZ OLIVA, MOISES EDUARDO",
+    "practicante_final": [
+      "Vasquez Soto, Elías Abraham"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, Meet",
+      "Jueves: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 33,
+    "nombre_curso": "Introducción a la Programación y Computación 1 (Sección D)",
+    "profesor": "VELIZ LINARES, HERMAN IGOR",
+    "practicante_final": [
+      "Porón Muñoz, Erick Daniel"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, MEET",
+      "Jueves: 07:10:00 - 08:50:00, MEET"
+    ]
+  },
+  {
+    "id": 34,
+    "nombre_curso": "Introducción a la Programación y Computación 1 (Sección E)",
+    "profesor": null,
+    "practicante_final": [
+      "Ajsivinac Xico, Eduardo Isaí"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, Sala de meet",
+      "Jueves: 07:10:00 - 08:50:00, Sala de meet"
+    ]
+  },
+  {
+    "id": 35,
+    "nombre_curso": "Introducción a la Programación y Computación 1 (Sección F)",
+    "profesor": "ESCOBAR ARGUETA, WILLIAM ESTUARDO",
+    "practicante_final": [
+      "López Ajvix, José Leonel"
+    ],
+    "detalles": [
+      "Lunes: 11:30:00 - 13:10:00, Google Meet",
+      "Miercoles: 11:30:00 - 13:10:00, Google Meet"
+    ]
+  },
+  {
+    "id": 36,
+    "nombre_curso": "Introducción a la Programación y Computación 2 (Sección A)",
+    "profesor": "PÉREZ TÜRK, MARLON ANTONIO",
+    "practicante_final": [
+      "Murga Barillas, Eddy Alejandro"
+    ],
+    "detalles": []
+  },
+  {
+    "id": 37,
+    "nombre_curso": "Introducción a la Programación y Computación 2 (Sección B)",
+    "profesor": "ROJAS MORALES, CLAUDIA LICETH",
+    "practicante_final": [
+      "Molina Guevara, Isaí Eliezer Magdiel"
+    ],
+    "detalles": [
+      "Jueves: 07:10:00 - 08:50:00, Meet",
+      "Viernes: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 38,
+    "nombre_curso": "Introducción a la Programación y Computación 2 (Sección C)",
+    "profesor": "RUIZ JUAREZ, JOSE MANUEL",
+    "practicante_final": [
+      "Velásquez Avila, Daniel Eduardo"
+    ],
+    "detalles": [
+      "Jueves: 07:10:00 - 08:50:00, Meet",
+      "Viernes: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 39,
+    "nombre_curso": "Introducción a la Programación y Computación 2 (Sección D)",
+    "profesor": "BARRIOS, STANLY",
+    "practicante_final": [
+      "Matías Guarcas, Javier Alejandro"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, Meet"
+    ]
+  },
+  {
+    "id": 40,
+    "nombre_curso": "Introducción a la Programación y Computación 2 (Sección N)",
+    "profesor": "ZAPETA GÓMEZ, EDWIN ESTUARDO",
+    "practicante_final": [
+      "Mejía Suchite, Jorge Andrés"
+    ],
+    "detalles": [
+      "Jueves: 17:20:00 - 19:00:00, Meet",
+      "Viernes: 17:20:00 - 19:00:00, Meet"
+    ]
+  },
+  {
+    "id": 41,
+    "nombre_curso": "Introducción a la Programación y Computación 2 (Sección P)",
+    "profesor": "PAZ GONZÁLEZ, FERNANDO JOSÉ",
+    "practicante_final": [
+      "Lima y Lima, Carlos Manuel"
+    ],
+    "detalles": [
+      "Lunes: 17:20:00 - 19:00:00, Meet",
+      "Miercoles: 17:20:00 - 19:00:00, Meet"
+    ]
+  },
+  {
+    "id": 42,
+    "nombre_curso": "Introducción a los Algoritmos y Flujos de Datos(Sección A)",
+    "profesor": null,
+    "practicante_final": [
+      "Velásquez Najera, Emiliano José"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, Meet",
+      "Jueves: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 43,
+    "nombre_curso": "Introducción a los Algoritmos y Flujos de Datos(Sección B)",
+    "profesor": null,
+    "practicante_final": [
+      "Chavez Portillo, Josue Daniel"
+    ],
+    "detalles": [
+      "Lunes: 07:10:00 - 08:50:00, MEET",
+      "Miercoles: 07:10:00 - 08:50:00, MEET"
+    ]
+  },
+  {
+    "id": 44,
+    "nombre_curso": "Introducción a los Algoritmos y Flujos de Datos(Sección C)",
+    "profesor": null,
+    "practicante_final": [
+      "Mejía Suchite, Jorge Andrés"
+    ],
+    "detalles": [
+      "Viernes: 07:10:00 - 10:40:00, Meet"
+    ]
+  },
+  {
+    "id": 45,
+    "nombre_curso": "Lenguajes Formales y de Programación (Sección A)",
+    "profesor": "CAMPOS DE LÓPEZ, DAMARIS",
+    "practicante_final": [
+      "Ojeda Rivas, Adriana Lucia"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, MEET"
+    ]
+  },
+  {
+    "id": 46,
+    "nombre_curso": "Lenguajes Formales y de Programación (Sección B+)",
+    "profesor": "Morales, David Estuardo",
+    "practicante_final": [
+      "Aguilar Acosta, Carlos Samuel"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 47,
+    "nombre_curso": "Lenguajes Formales y de Programación (Sección N)",
+    "profesor": "RODRIGUEZ ACOSTA, OTTO AMILCAR",
+    "practicante_final": [
+      "Pumay Soy, Jorge Estuardo"
+    ],
+    "detalles": [
+      "Martes: 17:20:00 - 19:00:00, Virtual"
+    ]
+  },
+  {
+    "id": 48,
+    "nombre_curso": "Logica de Sistemas(Sección A)",
+    "profesor": "TALA AYERDI, VIRGINIA VICTORIA",
+    "practicante_final": [
+      "Taperio Manuel, Jennifer Yulissa"
+    ],
+    "detalles": [
+      "Sabado: 13:50:00 - 15:30:00, UEDI"
+    ]
+  },
+  {
+    "id": 49,
+    "nombre_curso": "Logica de Sistemas(Sección B)",
+    "profesor": "AVILA PESQUERA DE MEDINILLA, FLORIZA FELIPA",
+    "practicante_final": [
+      "Debroy Salazar, Diego Fernando"
+    ],
+    "detalles": [
+      "Martes: 12:20:00 - 14:50:00, Meet",
+      "Martes: 12:20:00 - 14:50:00, Meet"
+    ]
+  },
+  {
+    "id": 50,
+    "nombre_curso": "Logica de Sistemas(Sección C)",
+    "profesor": "AVILA PESQUERA DE MEDINILLA, FLORIZA FELIPA",
+    "practicante_final": [
+      "Cardona Ramírez, Kervin Adolfo"
+    ],
+    "detalles": [
+      "Sabado: 13:50:00 - 15:30:00, Meet"
+    ]
+  },
+  {
+    "id": 51,
+    "nombre_curso": "Manejo e Implementacion de Archivos(Sección A)",
+    "profesor": "DIAZ ARDAVIN, JUAN ALVARO",
+    "practicante_final": [
+      "Rojas Maeda, Jonatan Samuel"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, https://meet.google.com/mdk-fadq-dwp",
+      "Miercoles: 07:10:00 - 08:50:00, https://meet.google.com/mdk-fadq-dwp"
+    ]
+  },
+  {
+    "id": 52,
+    "nombre_curso": "Manejo e Implementación de Archivos(Sección B)",
+    "profesor": "ESCOBAR ARGUETA, WILLIAM ESTUARDO",
+    "practicante_final": [
+      "Constanza Oscal, Williams Bramlley"
+    ],
+    "detalles": [
+      "Martes: 11:30:00 - 13:10:00, Meet",
+      "Jueves: 11:30:00 - 13:10:00, Meet"
+    ]
+  },
+  {
+    "id": 53,
+    "nombre_curso": "Manejo e Implementación de Archivos(Sección C)",
+    "profesor": "PAZ CAMPOS, OSCAR ALEJANDRO",
+    "practicante_final": [
+      "Ruiz Barbales, Kevin Golwer"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, MEET"
+    ]
+  },
+  {
+    "id": 54,
+    "nombre_curso": "Manejo e Implementacion de Archivos(Sección D)",
+    "profesor": "RAMIREZ RAMIREZ, JURGEN ANDONI",
+    "practicante_final": [
+      "Calderón Echeverría, Natalia Mariel"
+    ],
+    "detalles": [
+      "Sabado: 10:30:00 - 13:50:00, meet: https://meet.google.com/tck-fefa-qtd"
+    ]
+  },
+  {
+    "id": 55,
+    "nombre_curso": "Modelación y Simulación 1 (Sección A)",
+    "profesor": "FERNANDEZ CACERES, CESAR AUGUSTO",
+    "practicante_final": [
+      "Ramírez Gómez, Alben Adrian"
+    ],
+    "detalles": [
+      "Martes: 09:00:00 - 10:40:00, https://meet.google.com/ofv-fnhc-npm",
+      "Miercoles: 07:10:00 - 08:50:00, https://meet.google.com/ofv-fnhc-npm"
+    ]
+  },
+  {
+    "id": 56,
+    "nombre_curso": "Modelación y Simulación 2 (Sección A)",
+    "profesor": "CANCINOS RENDON, MIGUEL ANGEL",
+    "practicante_final": [
+      "Méndez Livar, Luis Rafael"
+    ],
+    "detalles": [
+      "Lunes: 19:00:00 - 20:40:00, https://meet.google.com/phu-ywbh-ene",
+      "Miercoles: 19:00:00 - 20:40:00, https://meet.google.com/phu-ywbh-ene"
+    ]
+  },
+  {
+    "id": 57,
+    "nombre_curso": "Modelación y Simulación 2 (Sección B)",
+    "profesor": "FERNANDEZ CACERES, CESAR AUGUSTO",
+    "practicante_final": [
+      "Schaart Calderón, Pablo Gerardo"
+    ],
+    "detalles": [
+      "Lunes: 07:10:00 - 08:50:00, Meet https://meet.google.com/ofd-kycx-ysg",
+      "Martes: 07:10:00 - 08:50:00, Meet https://meet.google.com/ofd-kycx-ysg"
+    ]
+  },
+  {
+    "id": 58,
+    "nombre_curso": "Organización Computacional (Sección A)",
+    "profesor": "ESCOBAR LEIVA, OTTO RENE",
+    "practicante_final": [
+      "Quel Santos, Henry David",
+      "Ortiz Tobar, Gerardo Leonel"
+    ],
+    "detalles": [
+      "Martes: 09:00:00 - 10:40:00, SEMIPRESENCIAL",
+      "Jueves: 09:00:00 - 10:40:00, SEMIPRESENCIAL"
+    ]
+  },
+  {
+    "id": 59,
+    "nombre_curso": "Organización Computacional (Sección A)",
+    "profesor": "ESCOBAR LEIVA, OTTO RENE",
+    "practicante_final": [
+      "Quel Santos, Henry David",
+      "Ortiz Tobar, Gerardo Leonel"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, 305"
+    ]
+  },
+  {
+    "id": 60,
+    "nombre_curso": "Organización Computacional (Sección B)",
+    "profesor": "ESCOBAR LEIVA, OTTO RENE",
+    "practicante_final": [
+      "Ralda Mejia, Sergio Saul",
+      "Blanco Guzmán, Carlos José"
+    ],
+    "detalles": [
+      "Martes: 12:20:00 - 14:00:00, Meet",
+      "Jueves: 12:20:00 - 14:00:00, Meet"
+    ]
+  },
+  {
+    "id": 61,
+    "nombre_curso": "Organización Computacional (Sección B)",
+    "profesor": "ESCOBAR LEIVA, OTTO RENE",
+    "practicante_final": [
+      "Ralda Mejia, Sergio Saul",
+      "Blanco Guzmán, Carlos José"
+    ],
+    "detalles": [
+      "Martes: 12:20:00 - 14:00:00, Meet",
+      "Jueves: 12:20:00 - 14:00:00, Meet"
+    ]
+  },
+  {
+    "id": 62,
+    "nombre_curso": "Organizacion Computacional(Sección C)",
+    "profesor": "PAZ GONZÁLEZ, FERNANDO JOSÉ",
+    "practicante_final": [
+      "Reyes Pineda, Eduardo Antonio",
+      "Valencia Estrada, Melvin Alexander"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, 410"
+    ]
+  },
+  {
+    "id": 63,
+    "nombre_curso": "Organizacion Computacional(Sección C)",
+    "profesor": "PAZ GONZÁLEZ, FERNANDO JOSÉ",
+    "practicante_final": [
+      "Reyes Pineda, Eduardo Antonio",
+      "Valencia Estrada, Melvin Alexander"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 10:30:00, Semipresencial"
+    ]
+  },
+  {
+    "id": 64,
+    "nombre_curso": "Organización de Lenguajes y Compiladores 2 (Sección A)",
+    "profesor": "LOPEZ LOPEZ, BAYRON WOSVELY",
+    "practicante_final": [
+      "Cali Morales, Diego Felipe"
+    ],
+    "detalles": [
+      "Lunes: 07:10:00 - 08:50:00, https://meet.google.com/zwe-bkeu-tzh",
+      "Sabado: 12:10:00 - 13:50:00, https://meet.google.com/zwe-bkeu-tzh"
+    ]
+  },
+  {
+    "id": 65,
+    "nombre_curso": "Organización de Lenguajes y Compiladores 2 (Sección N)",
+    "profesor": "SABAN RAXON, EDGAR RUBEN",
+    "practicante_final": [
+      "Vides Esteban, Omar Alejandro"
+    ],
+    "detalles": [
+      "Martes: 19:00:00 - 20:40:00, UEDI",
+      "Jueves: 19:00:00 - 20:40:00, UEDI"
+    ]
+  },
+  {
+    "id": 66,
+    "nombre_curso": "Organizacion de Lenguajes y Compiladores 2(Sección B)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Dubón Samayoa, Diego Andrés"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 10:40:00, https://meet.google.com/jjt-nabi-mhb"
+    ]
+  },
+  {
+    "id": 67,
+    "nombre_curso": "Organización Lenguajes y Compiladores 1 (Sección B)",
+    "profesor": "CASTILLO REYNA, MANUEL HAROLDO",
+    "practicante_final": [
+      "Morales Ortíz, Fernando Misael"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, Meet",
+      "Jueves: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 68,
+    "nombre_curso": "Organización Lenguajes y Compiladores 1 (Sección C)",
+    "profesor": "Lajpop Ajpacajá, Kevin Adiel",
+    "practicante_final": [
+      "Aldana Osorio, Johnny Whillman"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, https://meet.google.com/ubq-zsny-utj",
+      "Jueves: 07:10:50 - 08:50:00, https://meet.google.com/ubq-zsny-utj"
+    ]
+  },
+  {
+    "id": 69,
+    "nombre_curso": "Organización Lenguajes y Compiladores 1 (Sección N)",
+    "profesor": "BAUTISTA FUENTES, MARIO JOSE",
+    "practicante_final": [
+      "Monroy Pérez, Luis Eduardo"
+    ],
+    "detalles": [
+      "Martes: 17:20:00 - 19:00:00, Meet",
+      "Jueves: 17:20:00 - 19:00:00, Meet"
+    ]
+  },
+  {
+    "id": 70,
+    "nombre_curso": "Programación Comercial 1 (Sección A)",
+    "profesor": "MENENDEZ PEREZ, GUIPPSY JEANNIRA",
+    "practicante_final": [
+      "García Mejía, David Isaac"
+    ],
+    "detalles": [
+      "Sabado: 07:10:00 - 08:50:00, Salón Virtual"
+    ]
+  },
+  {
+    "id": 71,
+    "nombre_curso": "Programación Comercial 1 (Sección N)",
+    "profesor": "RAMIREZ RAMIREZ, JURGEN ANDONI",
+    "practicante_final": [
+      "Cruz Mendoza, Marco Fernando"
+    ],
+    "detalles": [
+      "Lunes: 19:00:00 - 19:50:00, Google Meet : https://meet.google.com/iad-mpfd-xxe",
+      "Miercoles: 19:00:00 - 19:50:00, Google Meet : https://meet.google.com/iad-mpfd-xxe"
+    ]
+  },
+  {
+    "id": 72,
+    "nombre_curso": "Programación Comercial 1(Sección Q)",
+    "profesor": "ESCOBAR ARGUETA, WILLIAM ESTUARDO",
+    "practicante_final": [
+      "Guzmán Hernández, José Daniel"
+    ],
+    "detalles": [
+      "Martes: 12:20:00 - 14:00:00, Virtual en meet Martes y Jueves, https://meet.google.com/ctt-zxxd-zox"
+    ]
+  },
+  {
+    "id": 73,
+    "nombre_curso": "Programación de Computadoras 1 090(Sección N)",
+    "profesor": "ESCOBAR ARGUETA, WILLIAM ESTUARDO",
+    "practicante_final": [
+      "Vejo Mendoza, Luis Alfredo"
+    ],
+    "detalles": [
+      "Lunes: 13:10:00 - 14:00:00, https://meet.google.com/nmn-ydah-cei",
+      "Viernes: 13:10:00 - 14:00:00, https://meet.google.com/nmn-ydah-cei"
+    ]
+  },
+  {
+    "id": 74,
+    "nombre_curso": "Programación de Computadoras 1 090(Sección P)",
+    "profesor": "RAMIREZ RAMIREZ, JURGEN ANDONI",
+    "practicante_final": [
+      "Chamalé Sánchez, Billy James"
+    ],
+    "detalles": []
+  },
+  {
+    "id": 75,
+    "nombre_curso": "Redes de Computadoras 1 (Sección A)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Montecinos Hernández, Josseline Griselda",
+      "Vásquez Flores, Roni Eduardo",
+      "Rodriguez Lima, Pablo Andres"
+    ],
+    "detalles": [
+      "Jueves: 07:10:00 - 10:40:00, Virtual"
+    ]
+  },
+  {
+    "id": 76,
+    "nombre_curso": "Redes de Computadoras 1 (Sección A)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Montecinos Hernández, Josseline Griselda",
+      "Vásquez Flores, Roni Eduardo",
+      "Rodriguez Lima, Pablo Andres"
+    ],
+    "detalles": [
+      "Jueves: 07:10:00 - 10:40:00, https://meet.google.com/qxb-mcip-tsp"
+    ]
+  },
+  {
+    "id": 77,
+    "nombre_curso": "Redes de Computadoras 1 (Sección A)",
+    "profesor": "ESPINO BARRIOS, LUIS FERNANDO",
+    "practicante_final": [
+      "Montecinos Hernández, Josseline Griselda",
+      "Vásquez Flores, Roni Eduardo",
+      "Rodriguez Lima, Pablo Andres"
+    ],
+    "detalles": [
+      "Jueves: 07:10:00 - 10:40:00, https://meet.google.com/qxb-mcip-tsp"
+    ]
+  },
+  {
+    "id": 78,
+    "nombre_curso": "Redes de computadoras 1(Sección N)",
+    "profesor": "HERNANDEZ RAMIREZ, PEDRO PABLO",
+    "practicante_final": [
+      "Sazo Quisquinay, César Fernando",
+      "Fernández Avila, Adrián Josué"
+    ],
+    "detalles": [
+      "Sabado: 14:00:00 - 17:20:00, Google Meet"
+    ]
+  },
+  {
+    "id": 79,
+    "nombre_curso": "Redes de computadoras 1(Sección N)",
+    "profesor": "HERNANDEZ RAMIREZ, PEDRO PABLO",
+    "practicante_final": [
+      "Sazo Quisquinay, César Fernando",
+      "Fernández Avila, Adrián Josué"
+    ],
+    "detalles": [
+      "Sabado: 14:00:00 - 17:20:00, Edificio T3 Salón 105"
+    ]
+  },
+  {
+    "id": 80,
+    "nombre_curso": "Redes de Computadoras 2(Sección N)",
+    "profesor": "MORATAYA, ALLAN ALBERTO",
+    "practicante_final": [
+      "Ruano Pérez, Dóminic Juan Pablo",
+      "González Velásquez, Angel Samuel",
+      "Pérez Cazún, Gonzalo Fernando"
+    ],
+    "detalles": [
+      "Martes: 17:20:00 - 19:00:00, meet.google.com/czh-yjda-cve",
+      "Jueves: 17:20:00 - 19:00:00, meet.google.com/czh-yjda-cve"
+    ]
+  },
+  {
+    "id": 81,
+    "nombre_curso": "Redes de Computadoras 2(Sección N)",
+    "profesor": "MORATAYA, ALLAN ALBERTO",
+    "practicante_final": [
+      "Ruano Pérez, Dóminic Juan Pablo",
+      "González Velásquez, Angel Samuel",
+      "Pérez Cazún, Gonzalo Fernando"
+    ],
+    "detalles": [
+      "Martes: 17:20:00 - 20:00:00, MEET",
+      "Jueves: 17:20:00 - 20:00:00, MEET"
+    ]
+  },
+  {
+    "id": 82,
+    "nombre_curso": "Redes de Computadoras 2(Sección N)",
+    "profesor": "MORATAYA, ALLAN ALBERTO",
+    "practicante_final": [
+      "Ruano Pérez, Dóminic Juan Pablo",
+      "González Velásquez, Angel Samuel",
+      "Pérez Cazún, Gonzalo Fernando"
+    ],
+    "detalles": [
+      "Martes: 17:20:00 - 19:00:00, Meet",
+      "Jueves: 17:20:00 - 19:00:00, Meet"
+    ]
+  },
+  {
+    "id": 83,
+    "nombre_curso": "Seminario de Sistemas 1 (Sección A)",
+    "profesor": "LOPEZ FERNANDEZ, MANUEL FERNANDO",
+    "practicante_final": [
+      "Calderón Navarijo, Elder Obdulio",
+      "Toscano Palacios, Carlos Jezeh"
+    ],
+    "detalles": [
+      "Viernes: 07:10:00 - 08:50:00, UEDI"
+    ]
+  },
+  {
+    "id": 84,
+    "nombre_curso": "Seminario de Sistemas 1 (Sección A)",
+    "profesor": "LOPEZ FERNANDEZ, MANUEL FERNANDO",
+    "practicante_final": [
+      "Calderón Navarijo, Elder Obdulio",
+      "Toscano Palacios, Carlos Jezeh"
+    ],
+    "detalles": [
+      "Viernes: 07:10:00 - 08:50:00, semipresencial"
+    ]
+  },
+  {
+    "id": 85,
+    "nombre_curso": "Seminario de Sistemas 1 (Sección B)",
+    "profesor": "CALDERON MENDEZ, NEFTALI DE JESUS",
+    "practicante_final": [
+      "Mazariegos Macario, Marco Pablo"
+    ],
+    "detalles": [
+      "Viernes: 07:10:00 - 08:50:00, Google Meet"
+    ]
+  },
+  {
+    "id": 86,
+    "nombre_curso": "Seminario de Sistemas 2(Sección N)",
+    "profesor": "PAZ GONZÁLEZ, FERNANDO JOSÉ",
+    "practicante_final": [
+      "Mazariegos Samayoa, Wendy Lucia"
+    ],
+    "detalles": [
+      "Lunes: 19:00:00 - 20:40:00, https://meet.google.com/jqh-uovp-phx",
+      "Miercoles: 19:00:00 - 20:40:00, https://meet.google.com/jqh-uovp-phx"
+    ]
+  },
+  {
+    "id": 87,
+    "nombre_curso": "Seminario de Sistemas 2(Sección P)",
+    "profesor": "VETTORAZZI ESPANA, LUIS ALBERTO",
+    "practicante_final": [
+      "Valdez González, Javier Andrés"
+    ],
+    "detalles": [
+      "Lunes: 19:00:00 - 20:40:00, UEDI",
+      "Miercoles: 19:00:00 - 20:40:00, UEDI"
+    ]
+  },
+  {
+    "id": 88,
+    "nombre_curso": "Sistemas Operativos 1 (Sección P)",
+    "profesor": "MENDEZ AGUILAR, SERGIO ARNALDO",
+    "practicante_final": [
+      "Lorenzana Medina, José Daniel",
+      "Reyes Yac, Elian Angel Fernando"
+    ],
+    "detalles": [
+      "Lunes: 17:20:00 - 19:00:00, meet.google.com/sre-qnef-icx",
+      "Miercoles: 17:20:00 - 19:00:00, meet.google.com/sre-qnef-icx"
+    ]
+  },
+  {
+    "id": 89,
+    "nombre_curso": "Sistemas Operativos 1 (Sección P)",
+    "profesor": "MENDEZ AGUILAR, SERGIO ARNALDO",
+    "practicante_final": [
+      "Lorenzana Medina, José Daniel",
+      "Reyes Yac, Elian Angel Fernando"
+    ],
+    "detalles": [
+      "Lunes: 17:20:00 - 19:00:00, https://meet.google.com/sre-qnef-icx",
+      "Miercoles: 17:20:00 - 19:00:00, https://meet.google.com/sre-qnef-icx"
+    ]
+  },
+  {
+    "id": 90,
+    "nombre_curso": "Sistemas Operativos 2 (Sección A)",
+    "profesor": "ORNELIS HOIL, EDGAR RENE",
+    "practicante_final": [
+      "Avila Flores, Javier Alejandro",
+      "Pamal de León, Alan Rodrigo"
+    ],
+    "detalles": [
+      "Lunes: 07:10:00 - 08:50:00, https://meet.google.com/hgt-ahrt-jvv",
+      "Miercoles: 09:00:00 - 10:40:00, https://meet.google.com/hgt-ahrt-jvv"
+    ]
+  },
+  {
+    "id": 91,
+    "nombre_curso": "Sistemas Operativos 2 (Sección A)",
+    "profesor": "ORNELIS HOIL, EDGAR RENE",
+    "practicante_final": [
+      "Avila Flores, Javier Alejandro",
+      "Pamal de León, Alan Rodrigo"
+    ],
+    "detalles": [
+      "Lunes: 07:10:00 - 08:50:00, https://meet.google.com/hgt-ahrt-jvv",
+      "Miercoles: 09:00:00 - 10:40:00, https://meet.google.com/hgt-ahrt-jvv"
+    ]
+  },
+  {
+    "id": 92,
+    "nombre_curso": "Sistemas Organizaciones y Gerenciales 1 (Sección N)",
+    "profesor": "ZAPETA GÓMEZ, EDWIN ESTUARDO",
+    "practicante_final": [
+      "Solis Osorio, Josue Daniel"
+    ],
+    "detalles": [
+      "Martes: 19:00:00 - 21:40:00, virtual",
+      "Jueves: 19:00:00 - 21:40:00, virtual"
+    ]
+  },
+  {
+    "id": 93,
+    "nombre_curso": "Software Avanzado (Sección A)",
+    "profesor": "MEDINILLA RODRIGUEZ, EVEREST DARWIN",
+    "practicante_final": [
+      "Samayoa Ruíz, Juan Pablo"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, meet.google.com/hkv-zedd-bna",
+      "Jueves: 07:10:00 - 08:50:00, meet.google.com/hkv-zedd-bna"
+    ]
+  },
+  {
+    "id": 94,
+    "nombre_curso": "Software Avanzado (Sección B)",
+    "profesor": "Aldana Prillwitz, Marco Tulio",
+    "practicante_final": [
+      "Pozuelos Estrada, Kevin Raúl"
+    ],
+    "detalles": [
+      "Miercoles: 17:20:00 - 19:00:00, VIRTUAL",
+      "Viernes: 17:20:00 - 19:00:00, VIRTUAL"
+    ]
+  },
+  {
+    "id": 95,
+    "nombre_curso": "Teoria de Sistemas 1 (Sección A)",
+    "profesor": "ALVAREZ MEJIA, JORGE LUIS",
+    "practicante_final": [
+      "Mendizabal Castro, Enner Esaí"
+    ],
+    "detalles": [
+      "Jueves: 07:10:00 - 08:50:00, Meet"
+    ]
+  },
+  {
+    "id": 96,
+    "nombre_curso": "Teoria de Sistemas 2 (Sección A)",
+    "profesor": "ALVAREZ MEJIA, JORGE LUIS",
+    "practicante_final": [
+      "Izas Marroquín, Daniel Eduardo"
+    ],
+    "detalles": [
+      "Martes: 07:10:00 - 08:50:00, Salón Virtual",
+      "Sabado: 08:50:00 - 10:30:00, Salón Virtual"
+    ]
+  },
+  {
+    "id": 97,
+    "nombre_curso": "Teoria de Sistemas 2 (Sección P)",
+    "profesor": null,
+    "practicante_final": [
+      "Del Cid Quezada, Kevin Estuardo"
+    ],
+    "detalles": [
+      "Lunes: 19:00:00 - 20:40:00, Meet",
+      "Miercoles: 19:00:00 - 20:40:00, Meet"
+    ]
+  }
+]
