@@ -117,8 +117,8 @@ const CreatePost = ({ onPostCreated }) => {
             >
               <option value="">-- Selecciona un curso --</option>
               {cursos.map((curso) => (
-                <option key={curso.id || curso.codigo} value={curso.id || curso.nombre}>
-                  {curso.nombre}
+                <option key={curso.id} value={curso.nombre_curso} style={{ color: 'black' }}>
+                  {curso.nombre_curso}
                 </option>
               ))}
             </select>

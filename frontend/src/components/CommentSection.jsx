@@ -74,8 +74,8 @@ const CommentSection = ({ id_publicacion }) => {
         ) : (
           comentarios.map((c, index) => (
             <div key={c.id_comentario || index} style={{ background: '#f9f9f9', padding: '8px', borderRadius: '4px', marginBottom: '6px' }}>
-              <p style={{ margin: 0, fontSize: '14px', fontWeight: 'bold' }}>{c.nombres ? `${c.nombres} ${c.apellidos}` : 'Usuario'}</p>
-              <p style={{ margin: 0, fontSize: '14px' }}>{c.mensaje}</p>
+              <p style={{ margin: 0, fontSize: '14px', fontWeight: 'bold', color: 'black' }}>{c.nombres ? `${c.nombres} ${c.apellidos}` : 'Usuario'}</p>
+              <p style={{ margin: 0, fontSize: '14px', color: 'black' }}>{c.mensaje}</p>
             </div>
           ))
         )}
